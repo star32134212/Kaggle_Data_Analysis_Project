@@ -2,7 +2,7 @@
 My side project by Python and R
 
 # MLB Data Analysis
-This dataset contains Major League Baseball’s complete batting and pitching statistics from 1871 to 2015, plus fielding statistics, standings, team stats, park stats, player demographics, managerial records, awards, post-season data, and more.
+This dataset contains Major League Baseball’s complete batting and pitching statistics from 1871 to 2015, plus fielding statistics, standings, team stats, park stats, player demographics, managerial records, awards, post-season data, and more.  
 
 # Brazilian E-Commerce Analysis
 The dataset has information of 100k orders from 2016 to 2018 made at multiple marketplaces in Brazil.  
