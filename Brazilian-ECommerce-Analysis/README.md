@@ -9,7 +9,7 @@ Kaggle：https://www.kaggle.com/olistbr/brazilian-ecommerce
 # section 1-統計法:巴西各地區商品類別推薦
 依據巴西的27州分類，統計每州的訂單數量和購買哪一種類商品的訂單最多。  
 各州的訂單數量：  
-<img width="490" height="350" src="https://github.com/star32134212/Brazilian-ECommerce-Analysis/blob/master/img/customer_state_data.png"/>  
+<img width="490" height="350" src="https://github.com/star32134212/Kaggle_Data_Analysis_Project/Brazilian-ECommerce-Analysis/blob/master/img/customer_state_data.png"/>  
 前三名分別為  
 SP:聖保羅  
 RJ:里約熱內盧  
