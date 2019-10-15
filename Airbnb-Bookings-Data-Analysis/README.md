@@ -27,7 +27,7 @@ country_destination:客戶的目的地，也就是要預測的lebal。(其中NDF
 <img width="490" height="350" src="https://github.com/star32134212/Kaggle_Data_Analysis_Project/blob/master/Airbnb-Bookings-Data-Analysis/image/destination%20.png"/>  
 ### 登入方式統計  
 大部分的客戶還是以直接登入為主，有部分靠Facebook,Google登入  
-<img width="490" height="350" src="https://github.com/star32134212/Airbnb-Bookings-Data-Analysis/blob/master/image/signup_method.png"/>  
+<img width="490" height="350" src="https://github.com/star32134212/Kaggle_Data_Analysis_Project/blob/master/Airbnb-Bookings-Data-Analysis/image/signup_method.png"/>  
 ### 各國使用裝置統計  
 可以看到用網路訂房的人遠遠超過用手機來訂，可以知道大家比較傾向於在家用電腦規劃行程，而不是用手機。  
 <img width="490" height="350" src="https://github.com/star32134212/Airbnb-Bookings-Data-Analysis/blob/master/image/signup_app.png"/>
