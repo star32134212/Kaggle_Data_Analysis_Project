@@ -24,7 +24,7 @@ country_destination:客戶的目的地，也就是要預測的lebal。(其中NDF
 
 ### 各國旅客數統計  
 美國的旅客遠遠超過其他國家  
-<img width="490" height="350" src="https://github.com/star32134212/Airbnb-Bookings-Data-Analysis/blob/master/image/destination%20.png"/>  
+<img width="490" height="350" src="https://github.com/star32134212/Kaggle_Data_Analysis_Project/blob/master/Airbnb-Bookings-Data-Analysis/image/destination%20.png"/>  
 ### 登入方式統計  
 大部分的客戶還是以直接登入為主，有部分靠Facebook,Google登入  
 <img width="490" height="350" src="https://github.com/star32134212/Airbnb-Bookings-Data-Analysis/blob/master/image/signup_method.png"/>  
@@ -43,7 +43,7 @@ min：1.00
 max：2014.00  
 很明顯2014和1歲是不可能的，2014應該是把年份填錯格，1可能是少打一個位數就送出。  
 將統計範圍設定在15-100歲可得到下面的分佈圖，由圖可知使用airbnb訂房的人大都落在20-40歲的區間。   
-<img width="490" height="350" src="https://github.com/star32134212/Airbnb-Bookings-Data-Analysis/blob/master/image/age.png"/>  
+<img width="490" height="350" src="https://github.com/star32134212/Kaggle_Data_Analysis_Project/blob/master/Airbnb-Bookings-Data-Analysis/image/age.png"/>  
 ### 進階數據
 前面的部分是從資料表中的資料去做統計，接著我從上面有的資料算出一些可能有用的進階數據。  
 #### 對airbnb的搜尋結果滿意程度
