@@ -30,7 +30,7 @@ country_destination:客戶的目的地，也就是要預測的lebal。(其中NDF
 <img width="490" height="350" src="https://github.com/star32134212/Kaggle_Data_Analysis_Project/blob/master/Airbnb-Bookings-Data-Analysis/image/signup_method.png"/>  
 ### 各國使用裝置統計  
 可以看到用網路訂房的人遠遠超過用手機來訂，可以知道大家比較傾向於在家用電腦規劃行程，而不是用手機。  
-<img width="490" height="350" src="https://github.com/star32134212/Airbnb-Bookings-Data-Analysis/blob/master/image/signup_app.png"/>
+<img width="490" height="350" src="https://github.com/star32134212/Kaggle_Data_Analysis_Project/blob/master/Airbnb-Bookings-Data-Analysis/image/signup_app.png"/>
 ### 年齡分佈
 先使用 users['age'].describe() 看看一些基本的統計資料。  
 count：158681.00  
@@ -64,7 +64,7 @@ max：2014.00
 #### 旅遊旺季
 由於訂房的客戶剛好都是北半球，於是我以1到3月當冬季、4到6月當春季、7到9月當夏季、10到12月當冬季統計每個季節的旅客人數。  
 由下表可知，春季和冬季出去旅遊的人數較多。  
-<img width="490" height="350" src="https://github.com/star32134212/Airbnb-Bookings-Data-Analysis/blob/master/image/season.png"/>
+<img width="490" height="350" src="https://github.com/star32134212/Kaggle_Data_Analysis_Project/blob/master/Airbnb-Bookings-Data-Analysis/image/season.png"/>
 # Data Preprocessing
 看了所有的資料，決定用性別、年齡、訂房季節來預測目的地，其他的資料不是太偏某個值就是跟目的地搭不上關係。  
 性別把女性當作2、男性當作1、其他當作0做前處理。
@@ -75,18 +75,18 @@ max：2014.00
 layers=<3,5,4,6,12>  
 epochs=200  
 blocksize=256  
-<img width="360" height="240" src="https://github.com/star32134212/Airbnb-Bookings-Data-Analysis/blob/master/image/label_encoder.png"/>
-<img width="360" height="240" src="https://github.com/star32134212/Airbnb-Bookings-Data-Analysis/blob/master/image/result_1.png"/>  
+<img width="360" height="240" src="https://github.com/star32134212/Kaggle_Data_Analysis_Project/blob/master/Airbnb-Bookings-Data-Analysis/image/label_encoder.png"/>
+<img width="360" height="240" src="https://github.com/star32134212/Kaggle_Data_Analysis_Project/blob/master/Airbnb-Bookings-Data-Analysis/image/result_1.png"/>  
 由於NDF和US佔大多數導致模型幾乎都猜這兩個也能得到比較低的loss，這樣的預測其實幫助不大。  
 # Experimental Result ver 2.0
 已知US佔大多數，DNF和other沒有用，把這些去除掉後可以得到剩下國家的分佈。  
-<img width="490" height="350" src="https://github.com/star32134212/Airbnb-Bookings-Data-Analysis/blob/master/image/destination_ver2.png"/>  
+<img width="490" height="350" src="https://github.com/star32134212/Kaggle_Data_Analysis_Project/blob/master/Airbnb-Bookings-Data-Analysis/image/destination_ver2.png"/>  
 layers=<3,5,4,4,4,6,9>  
 epochs=200  
 blocksize=256  
 expect USA,NDF,other  
-<img width="360" height="240" src="https://github.com/star32134212/Airbnb-Bookings-Data-Analysis/blob/master/image/label_encoder2.png"/>
-<img width="360" height="240" src="https://github.com/star32134212/Airbnb-Bookings-Data-Analysis/blob/master/image/result_2.png"/>  
+<img width="360" height="240" src="https://github.com/star32134212/Kaggle_Data_Analysis_Project/blob/master/Airbnb-Bookings-Data-Analysis/image/label_encoder2.png"/>
+<img width="360" height="240" src="https://github.com/star32134212/Kaggle_Data_Analysis_Project/blob/master/Airbnb-Bookings-Data-Analysis/image/result_2.png"/>  
 這次換幾乎都猜法國了...資料數量差距太大加上能拿來預測的feature過少都是問題。  
 # Conclusion
 (1)訂房資料對帳戶的特徵有比較多feature，但這分資料即能用來判斷的特徵仍然不夠，統計法可以得到更直觀的結果。  
