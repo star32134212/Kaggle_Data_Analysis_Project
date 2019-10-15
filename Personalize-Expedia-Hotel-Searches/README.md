@@ -39,24 +39,24 @@ comp1_inv 1代表競爭者沒有房間存貨 0代表競爭者和E都有存貨
 comp1_rate_percent_diff E和競爭者各自提供價格之差距百分比  
 # Statistical Data
 客戶訂的房間類型分佈：  
-<img width="600" height="350" src="https://github.com/star32134212/Personalize-Expedia-Hotel-Searches/blob/master/img/room_type.png"/>  
+<img width="600" height="350" src="https://github.com/star32134212/Kaggle_Data_Analysis_Project/blob/master/Personalize-Expedia-Hotel-Searches/img/room_type.png"/>  
 單人房數量最多，其次是雙人房。  
   
 飯店是否為有品牌的連鎖飯店：  
-<img width="600" height="350" src="https://github.com/star32134212/Personalize-Expedia-Hotel-Searches/blob/master/img/brand.png"/>   
+<img width="600" height="350" src="https://github.com/star32134212/Kaggle_Data_Analysis_Project/blob/master/Personalize-Expedia-Hotel-Searches/img/brand.png"/>   
   
 住宿是否包含週六晚上：  
-<img width="600" height="350" src="https://github.com/star32134212/Personalize-Expedia-Hotel-Searches/blob/master/img/saturday.png"/>  
+<img width="600" height="350" src="https://github.com/star32134212/Kaggle_Data_Analysis_Project/blob/master/Personalize-Expedia-Hotel-Searches/img/saturday.png"/>  
   
 住宿天數分佈：  
-<img width="600" height="350" src="https://github.com/star32134212/Personalize-Expedia-Hotel-Searches/blob/master/img/night.png"/>
+<img width="600" height="350" src="https://github.com/star32134212/Kaggle_Data_Analysis_Project/blob/master/Personalize-Expedia-Hotel-Searches/img/night.png"/>
   
 成人與小孩數量：  
-<img width="400" height="240" src="https://github.com/star32134212/Personalize-Expedia-Hotel-Searches/blob/master/img/adults.png"/>
-<img width="400" height="240" src="https://github.com/star32134212/Personalize-Expedia-Hotel-Searches/blob/master/img/children.png"/>   
+<img width="400" height="240" src="https://github.com/star32134212/Kaggle_Data_Analysis_Project/blob/master/Personalize-Expedia-Hotel-Searches/img/adults.png"/>
+<img width="400" height="240" src="https://github.com/star32134212/Kaggle_Data_Analysis_Project/blob/master/Personalize-Expedia-Hotel-Searches/img/children.png"/>   
   
 飯店星級分佈：  
-<img width="600" height="350" src="https://github.com/star32134212/Personalize-Expedia-Hotel-Searches/blob/master/img/star_rating.png"/>   
+<img width="600" height="350" src="https://github.com/star32134212/Kaggle_Data_Analysis_Project/blob/master/Personalize-Expedia-Hotel-Searches/img/star_rating.png"/>   
 
 
 點擊/訂房與價格的關係：
@@ -72,7 +72,7 @@ comp1_rate_percent_diff E和競爭者各自提供價格之差距百分比
 # Data Preprocessing
 這份資料集的資料非常多，因此需要篩選和清洗比較好分析。
 下圖為各飯店所在國家分佈：  
-<img width="600" height="350" src="https://github.com/star32134212/Personalize-Expedia-Hotel-Searches/blob/master/img/property_country_id.png"/>   
+<img width="600" height="350" src="https://github.com/star32134212/Kaggle_Data_Analysis_Project/blob/master/Personalize-Expedia-Hotel-Searches/img/property_country_id.png"/>   
 由圖可知編號219的國家遠超過其他國家，雖然只有代碼沒有國家名，但可以合理猜測219是指美國，如果將研究客群鎖定在美國就可以少一個變數了。  
 因此決定只取編號為219的資料。即使只取219，還是有570多萬筆資料，因此先從中隨機抽樣5%做研究比較好操控：  
   
@@ -137,7 +137,7 @@ sb.heatmap(correlation, vmax=1, square=True,annot=True,cmap='viridis')
 plt.title('Correlation between different fearures');
 ```
 
-<img width="1200" height="700" src="https://github.com/star32134212/Personalize-Expedia-Hotel-Searches/blob/master/img/correlation.png"/>   
+<img width="1200" height="700" src="https://github.com/star32134212/Kaggle_Data_Analysis_Project/blob/master/Personalize-Expedia-Hotel-Searches/img/correlation.png"/>   
 然後直接將pandas處理好的dataframe轉成RDD
 
 ```
@@ -145,7 +145,7 @@ us_visitor_df = sc.createDataFrame(us_visitor)
 us_visitor_df.printSchema()
 ```
 
-<img width="600" height="350" src="https://github.com/star32134212/Personalize-Expedia-Hotel-Searches/blob/master/img/printSchema.png"/>   
+<img width="600" height="350" src="https://github.com/star32134212/Kaggle_Data_Analysis_Project/blob/master/Personalize-Expedia-Hotel-Searches/img/printSchema.png"/>   
 以上這些是用來預測的特徵。  
   
  ```
@@ -173,7 +173,7 @@ output = assembler.transform(us_visitor_df)
   (4)對於不平衡的分類資料集來說，它可以平衡誤差。  
 ### Gradient Boosting Tree
 Boosting的宗旨是對於一份數據，想建立M個模型來預測，每個模型都會將上一個模型分類錯的樣本權重增加，因此越往後的模型，就會越在意那些容易分錯的點，最終跑出第M個模型就會是集前(M-1)個模型的經驗得到一個最不容易出錯的模型。Gradient Boosting是指每次新建立的模型都會在前一個模型的梯度下降方向上，確保新的模型正在往理想模型的方向上前進。  
-<img width="600" height="350" src="https://github.com/star32134212/Personalize-Expedia-Hotel-Searches/blob/master/img/GBT.png"/>  
+<img width="600" height="350" src="https://github.com/star32134212/Kaggle_Data_Analysis_Project/blob/master/Personalize-Expedia-Hotel-Searches/img/GBT.png"/>  
 # Experimental Result
 ```
 def train_model(x,y):
@@ -203,7 +203,7 @@ def train_model(x,y):
 ## 加入時間特徵
 每筆搜尋紀錄都有時間，因此也可以拿到點擊與訂房時間，將時間處理成月份和小時加入特徵。  
 EX: 2013-01-02 22:19:08可以變成 'month'=1,'hour'=22  
-<img width="1200" height="700" src="https://github.com/star32134212/Personalize-Expedia-Hotel-Searches/blob/master/img/correlation2.png"/>   
+<img width="1200" height="700" src="https://github.com/star32134212/Kaggle_Data_Analysis_Project/blob/master/Personalize-Expedia-Hotel-Searches/img/correlation2.png"/>   
   
 ## click_bool預測
 #### BinaryClassificationEvaluator
@@ -228,7 +228,7 @@ Gradient-boosted Trees Accu: 0.9717394239858022
 ## position預測  
   
 position分佈：  
-<img width="600" height="350" src="https://github.com/star32134212/Personalize-Expedia-Hotel-Searches/blob/master/img/position.png"/>  
+<img width="600" height="350" src="https://github.com/star32134212/Kaggle_Data_Analysis_Project/blob/master/Personalize-Expedia-Hotel-Searches/img/position.png"/>  
 
 #### MulticlassClassificationEvaluator
 Decision Tree Accu: 0.05192013478707128  
