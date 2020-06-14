@@ -13,3 +13,5 @@ Using original booking data to predict in which country a new user will make his
 ## Personalize Expedia Hotel Searches
 The data are organized around a set of “search result impressions”, or the ordered list of hotels that the user sees after they search for a hotel on the Expedia website.  
 
+## Default of Credit Card Clients Dataset
+This dataset contains information on default payments, demographic factors, credit data, history of payment, and bill statements of credit card clients in Taiwan from April 2005 to September 2005.  
