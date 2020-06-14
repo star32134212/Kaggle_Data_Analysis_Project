@@ -1,8 +1,8 @@
 # Default of Credit Card Clients Dataset
 2020 Deep Learning final project  
-(dataset)[https://www.kaggle.com/uciml/default-of-credit-card-clients-dataset]  
+[dataset](https://www.kaggle.com/uciml/default-of-credit-card-clients-dataset)  
 ### data
-ID: ID of each client  
+`ID`: ID of each client  
 LIMIT_BAL: Amount of given credit in NT dollars (includes individual and family/supplementary credit
 SEX: Gender (1=male, 2=female)  
 EDUCATION: (1=graduate school, 2=university, 3=high school, 4=others, 5=unknown, 6=unknown)  
