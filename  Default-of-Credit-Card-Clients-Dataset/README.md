@@ -46,22 +46,51 @@ DNN(
 ```
 
 ### Result
-**Imbalanced data processing: True**  
-#### train
-
-#### test
-PP 608  
-PN 817  
-NP 401  
-NN 1174  
-acc 0.594  
-precision 0.6025768087215064  
-recall 0.4266666666666667  
-f1_score 0.49958915365653245  
-auc 0.6081689011625317  
-
 **Imbalanced data processing: False**  
 #### train
-
+PP 0  
+PN 653  
+NP 0  
+NN 2347  
+acc 0.77452  
+precision 0.2857142857142857  
+recall 0.0010660980810234541  
+f1_score 0.002124269782262347  
+auc 0.6275074545947411  
 #### test
+PP 0  
+PN 653  
+NP 0  
+NN 2347  
+acc 0.77452  
+precision 0.2857142857142857  
+recall 0.0010660980810234541  
+f1_score 0.002124269782262347  
+auc 0.6275074545947411  
+**Imbalanced data processing: True**  
+#### train
+PP 626  
+PN 799  
+NP 433  
+NN 1142  
+acc 0.5959  
+precision 0.5938281901584654  
+recall 0.4529262086513995  
+f1_score 0.5138939011187297  
+auc 0.6144589053307185  
+#### test
+PP 626  
+PN 799  
+NP 433  
+NN 1142  
+acc 0.5893333333333334  
+precision 0.591123701605288  
+recall 0.4392982456140351  
+f1_score 0.5040257648953301  
+auc 0.6144589053307185  
 
+
+
+#### Link
+[slide](https://www.overleaf.com/project/5edf7f6245fbdc00014c61e0)  
+[notion](https://www.notion.so/Group40-Report-e90145527717498381951c12f4cf33cb)  
