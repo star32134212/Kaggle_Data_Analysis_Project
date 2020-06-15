@@ -1,7 +1,7 @@
 # Default of Credit Card Clients Dataset
 2020 Deep Learning final project  
 [dataset](https://www.kaggle.com/uciml/default-of-credit-card-clients-dataset)  
-### data
+### Data
 `ID`: ID of each client  
 `LIMIT_BAL`: Amount of given credit in NT dollars (includes individual and family/supplementary credit
 `SEX`: Gender (1=male, 2=female)  
@@ -27,3 +27,41 @@
 `PAY_AMT5`: Amount of previous payment in May, 2005 (NT dollar)  
 `PAY_AMT6`: Amount of previous payment in April, 2005 (NT dollar)  
 `default.payment.next.month`: Default payment (1=yes, 0=no)  
+### Model
+```
+DNN(
+  (dnn1): Sequential(
+    (0): Linear(in_features=9, out_features=36, bias=True)
+    (1): ReLU()
+  )
+  (dnn2): Sequential(
+    (0): Linear(in_features=36, out_features=108, bias=True)
+    (1): Dropout(p=0.8, inplace=False)
+    (2): ReLU()
+  )
+  (dnn3): Sequential(
+    (0): Linear(in_features=108, out_features=2, bias=True)
+  )
+)
+```
+
+### Result
+**Imbalanced data processing: True**  
+#### train
+
+#### test
+PP 608  
+PN 817  
+NP 401  
+NN 1174  
+acc 0.594  
+precision 0.6025768087215064  
+recall 0.4266666666666667  
+f1_score 0.49958915365653245  
+auc 0.6081689011625317  
+
+**Imbalanced data processing: False**  
+#### train
+
+#### test
+
